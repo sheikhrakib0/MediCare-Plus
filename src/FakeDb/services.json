@@ -1,0 +1,57 @@
+
+[
+  {
+    "_id": "616c8a327cff04b6949e6ca6",
+    "balance": 436,
+    "description": "Diagnosis is often challenging, because many signs and symptoms are nonspecific, and can only be undertaken by registered and licensed health professionals. For example, redness of the skin (erythema), by itself, is a sign of many disorders and thus does not tell the healthcare professional what is wrong. Thus differential diagnosis, in which several possible explanations are compared and contrasted, must be performed. This involves the correlation of various pieces of information followed by the recognition and differentiation of patterns",
+    "picture": "https://ibb.co/Fz7YCjk",
+    "name": "Diagnostics",
+    "email": "marciegraham@polaria.com",
+    "doctor": "Dr. John Karim"
+  },
+  {
+    "_id": "616c8a32028d9286814079ec",
+    "balance": 487,
+    "description": "Therapeutics, treatment and care of a patient for the purpose of both preventing and combating disease or alleviating pain or injury. The term comes from the Greek therapeutikos, which means “inclined to serve.”",
+    "picture": "https://ibb.co/0YkLR9b",
+    "name": "Therapeutics",
+    "email": "lisasparks@polaria.com",
+    "doctor": "Dr. Rahman Khan"
+  },
+  {
+    "_id": "616c8a3288c77bbb1de3f956",
+    "balance": 467,
+    "description": "The LAB system is the term used to describe the computer hardware and software that support the clinical laboratories, including the processing of requests for laboratory testing on patients' specimens, the internal operations of the laboratories, and the reporting of laboratory test results.",
+    "picture": "https://ibb.co/DD63CWX",
+    "doctor": "Mcmillan Hoffman",
+    "name": "Laboratory",
+    "email": "mcmillanhoffman@polaria.com"
+  },
+  {
+    "_id": "616c8a32c200d96849613b19",
+    "balance": 163,
+    "description": "The act of performing surgery may be called a surgical procedure, operation, or simply surery. In this context, the verb surgery means to perform surgery. The adjective surgical means pertaining to surgery; e.g. surgical instruments or surgical nurse. The person or subject on which the surgery is performed can be a person or an animal. A surgeon is a person who practices surgery and a surgeon's assistant is a person who practices surgical assistance.",
+    "picture": "https://ibb.co/M1VrMFT",
+    "doctor": "Weeks Maddox",
+    "name": "Surgery",
+    "email": "weeksmaddox@polaria.com"
+  },
+  {
+    "_id": "616c8a323af2933fb992427e",
+    "balance": 293,
+    "description": "All cardiologists study the disorders of the heart, but the study of adult and child heart disorders are through different training pathways. Therefore, an adult cardiologist (often simply called cardiologist) is inadequately trained to take care of children, and pediatric cardiologists are not trained to take care of adult heart disease. The surgical aspects are not included in cardiology and are in the domain of cardiothoracic surgery.",
+    "picture": "https://ibb.co/r6fhhqs",
+    "doctor": "Combs Gardner",
+    "name": "Cardiology",
+    "email": "combsgardner@polaria.com"
+  },
+  {
+    "_id": "616c8a327b5917b0c2a42608",
+    "balance": 159,
+    "description": "Your doctor might suggest this type of treatment if you’ve had an injury or illness that makes it hard to do daily tasks. Physical therapy (PT) is care that aims to ease pain and help you function, move, and live better.",
+    "picture": "https://ibb.co/G9XHthm",
+    "doctor": "Ora Evans",
+    "name": "Physical Therapy",
+    "email": "oraevans@polaria.com"
+  }
+]
