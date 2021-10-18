@@ -18,6 +18,8 @@ const Header = () => {
           <Link className='p-2 uppercase' to='/services'>Services</Link>
           <Link className='p-2 uppercase' to="/price">Prices</Link>
           <Link className='p-2 uppercase' to='/contact'>Contact Us</Link>
+          <Link className='p-2 uppercase' to='/login'>Login</Link>
+          <Link className='p-2 uppercase' to='/register'>Register</Link>
         </div>
       </div>
       <div>

@@ -4,6 +4,8 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login/Login';
+import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import Price from './components/Price/Price';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
@@ -23,6 +25,12 @@ function App() {
           </Route>
           <Route path='/services'>
             <Services></Services>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='/register'>
+            <Register></Register>
           </Route>
           <Route path='/servicedetails/:id'>
             <ServiceDetails></ServiceDetails>
