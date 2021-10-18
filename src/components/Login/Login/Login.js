@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 
 const Login = () => {
 
+  const {signInUsingGoogle} = useAuth();
 
   return (
     <div>
@@ -25,12 +27,12 @@ const Login = () => {
               <form className="mt-6" action="#" method="POST">
                 <div>
                   <label className="block text-gray-700">Email Address</label>
-                  <input type="email" nameName="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                  <input type="email" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autocomplete required />
                 </div>
 
-                <div class="mt-4">
+                <div className="mt-4">
                   <label className="block text-gray-700">Password</label>
-                  <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                  <input type="password" name="" id="" placeholder="Enter Password" minlenght="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
                 </div>
 
@@ -44,7 +46,7 @@ const Login = () => {
 
               <hr className="my-6 border-gray-300 w-full" />
 
-              <button type="button" className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
+              <button onClick={signInUsingGoogle} type="button" className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                 <div className="flex items-center justify-center">
                   <span className="ml-4">
                     Log in

@@ -10,43 +10,46 @@ import NotFound from './components/NotFound/NotFound';
 import Price from './components/Price/Price';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
+import AuthProvider from './Contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path='/'>
-            <Home></Home>
-          </Route>
-          <Route path='/home'>
-            <Home></Home>
-          </Route>
-          <Route path='/services'>
-            <Services></Services>
-          </Route>
-          <Route path='/login'>
-            <Login></Login>
-          </Route>
-          <Route path='/register'>
-            <Register></Register>
-          </Route>
-          <Route path='/servicedetails/:id'>
-            <ServiceDetails></ServiceDetails>
-          </Route>
-          <Route path='/price'>
-            <Price></Price>
-          </Route>
-          <Route path='/contact'>
-            <ContactUs></ContactUs>
-          </Route>
-          <Route exact path='*'>
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
+            <Route path='/services'>
+              <Services></Services>
+            </Route>
+            <Route path='/login'>
+              <Login></Login>
+            </Route>
+            <Route path='/register'>
+              <Register></Register>
+            </Route>
+            <Route path='/servicedetails/:id'>
+              <ServiceDetails></ServiceDetails>
+            </Route>
+            <Route path='/price'>
+              <Price></Price>
+            </Route>
+            <Route path='/contact'>
+              <ContactUs></ContactUs>
+            </Route>
+            <Route exact path='*'>
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
