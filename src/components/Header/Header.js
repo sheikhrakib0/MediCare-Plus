@@ -7,45 +7,60 @@ import useAuth from '../../Hooks/useAuth';
 
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+  const { user, logOut } = useAuth();
 
-    return (
-        <div>
-            <div className='nav bg-black flex justify-between items-center px-2'>
-                <div className='p-4 flex' >
-                    <img className='logo pr-4'
-                        src={logo}
-                        alt="" />
-                    <h2 className='nav-heading text-white text-4xl' > MediCare Plus </h2>
-                </div>
-                <div className='text-white' >
-                    <Link className='p-2 uppercase'
-                        to='/home'>Home</Link>
-                    <Link className='p-2 uppercase'
-                        to='/services'>Services</Link>
-                    <Link className='p-2 uppercase'
-                        to="/price">Prices</Link>
-                    <Link className='p-2 uppercase'
-                        to='/contact'>Contact Us</Link>
-                    {user?.email ?
-                        <button onClick={logOut}
-                            data-modal-toggle="example2"
-                            data-modal-action="open"
-                            className="bg-purple-600 font-semibold text-white p-2 w-32 rounded-full hover:bg-purple-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2 uppercase">Logout </button> :
-                        <Link to='/login' >
-                            < button
-                                data-modal-toggle="example2"
-                                data-modal-action="open"
-                                className="bg-purple-600 font-semibold text-white p-2 w-32 rounded-full hover:bg-purple-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2 uppercase" >
-                                Login</button></Link>}
-                    <p className='inline' > signed in as: {user?.displayName} </p>
-                </div>
+  return (
+    <div>
+      <div>
+        <nav class="flex items-center justify-between flex-wrap bg-black text-white p-6">
+          <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <img src={logo} alt='logo' class="fill-current h-8 w-8 mr-2" width="54" height="54" />
+            <span class="font-semibold text-xl tracking-tight">Medicare Plus</span>
+          </div>
+          <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+            </button>
+          </div>
+          <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="text-sm lg:flex-grow">
+              <Link to="/home" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+                Home
+              </Link>
+              <Link to='/services' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+                Services
+              </Link>
+              <Link to='/price' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+                Price
+              </Link>
+              <Link to='/contact' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white uppercase">
+                Contact Us
+              </Link>
             </div>
             <div>
-                <Slider> </Slider>
+              {user?.email ?
+                <div>
+                  <button onClick={logOut}
+                  data-modal-toggle="example2"
+                  data-modal-action="open"
+                  className="bg-purple-600 font-semibold text-white p-2 w-32 rounded-full hover:bg-purple-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2 uppercase">Logout </button> 
+                  <p className='inline'>Signed in as: {user?.displayName}</p> 
+                </div>:
+                <Link to='/login' >
+                  < button
+                    data-modal-toggle="example2"
+                    data-modal-action="open"
+                    className="bg-purple-600 font-semibold text-white p-2 w-32 rounded-full hover:bg-purple-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2 uppercase" >
+                    Login</button></Link>}
             </div>
-        </div>
-    );
+          </div>
+        </nav>
+      </div>
+      <div>
+        <Slider> </Slider>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

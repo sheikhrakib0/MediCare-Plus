@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
-  const {signInUsingEmail} = useAuth();
+  const {signInUsingEmail, processLogin} = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  processLogin(email, password, setError);
 
   const handleRegistration = (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ const Register = () => {
       return
     }
     else{
-      signInUsingEmail(email, password,setError);
+      signInUsingEmail(email, password, setError);
     }
     
   }
@@ -76,7 +78,7 @@ const Register = () => {
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="email"
                     type="email"
-                    placeholder="Email"
+                    placeholder="Email" required
                   />
                 </div>
                 <div className="mb-4 md:flex md:justify-between">
@@ -88,20 +90,9 @@ const Register = () => {
                       className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                       id="password"
                       type="password"
-                      placeholder="******************"
+                      placeholder="*************" required
                     />
                     <p className="text-xs italic text-red-500">Please choose a password.</p>
-                  </div>
-                  <div className="md:ml-2">
-                    <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="c_password">
-                      Confirm Password
-                    </label>
-                    <input
-                      className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="c_password"
-                      type="password"
-                      placeholder="******************"
-                    />
                   </div>
                 </div>
                 <div className="mb-6 text-center">

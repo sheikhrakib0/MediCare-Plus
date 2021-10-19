@@ -62,7 +62,7 @@ const Home = () => {
 
             {/* Appointment section  */}
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center' id="appoinment">
                 <div className="leading-loose">
                     <form className="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
                         <p className="text-gray-800 text-4xl font-bold">Appointment Form</p>

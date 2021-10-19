@@ -8,9 +8,9 @@ const Login = () => {
   const {signInUsingGoogle} = useAuth();
 
   return (
-    <div>
+    <div className='container mx-auto bg-gray-300 my-10'>
       <div>
-        <section className="flex flex-col md:flex-row h-screen items-center">
+        <section className="flex flex-col md:flex-row h-screen items-center rounded">
 
           <div className="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
             <img src="https://source.unsplash.com/random" alt="" className="w-full h-full object-cover" />
