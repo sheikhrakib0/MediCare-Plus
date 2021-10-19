@@ -10,8 +10,8 @@ const Services = () => {
         .then(data=>setServices(data))
     },[])
     return (
-        <div>
-            <h2 className='text-2xl font-bold text-center uppercase p-4'>Our Services</h2>
+        <div className='mb-4'>
+            <h2 className='text-2xl font-bold text-center uppercase p-4 text-blue-600'>Our Services</h2>
             <div className='container mx-auto grid grid-cols-2 gap-4 md:grid-cols-3'>
             
             {

@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import Price from './components/Price/Price';
@@ -34,9 +35,9 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <Route path='/servicedetails/:id'>
+            <PrivateRoute path='/servicedetails/:id'>
               <ServiceDetails></ServiceDetails>
-            </Route>
+            </PrivateRoute>
             <Route path='/price'>
               <Price></Price>
             </Route>

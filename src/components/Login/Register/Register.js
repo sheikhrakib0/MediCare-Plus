@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
+  const {signInUsingEmail} = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleRegistration = (e) => {
     e.preventDefault();
     console.log(email, password);
+    if(password.length < 6){
+      setError('Password should be at least 6 characters,')
+      return
+    }
+    else{
+      signInUsingEmail(email, password,setError);
+    }
+    
   }
 
   const handleEmailInput= (e)=>{
@@ -95,6 +105,7 @@ const Register = () => {
                   </div>
                 </div>
                 <div className="mb-6 text-center">
+                  <div className='text-red-700'>{error}</div>
                   <button onClick={handleRegistration}
                     className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                     type="button"

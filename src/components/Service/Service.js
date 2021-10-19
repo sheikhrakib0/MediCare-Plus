@@ -4,7 +4,7 @@ import './Service.css';
 
 
 const Service = (props) => {
-  console.log(props.service);
+  // console.log(props.service);
   const { _id, name, picture, balance, doctor } = props.service;
   return (
     <div className='justify-center text-center bg-gray-200 p-2 rounded-xl'>

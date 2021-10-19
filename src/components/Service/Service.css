@@ -1,6 +1,6 @@
 .service-button{
-  background-color: #d6106c;
+  background-color: rgb(56, 56, 175);
 }
 .service-button:hover{
-  background-color: purple;
+  background-color: rgba(73, 60, 192, 0.719);
 }
