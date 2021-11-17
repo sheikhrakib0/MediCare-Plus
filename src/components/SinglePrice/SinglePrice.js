@@ -15,7 +15,7 @@ const SinglePrice = (props) => {
               {name}
             </h3>
             <p className='text-white'>Reviews: {popularity}</p>
-            <Link to="/home#appointment">
+            <Link to="/*">
             <button
                     data-modal-toggle="example2"
                     data-modal-action="open"

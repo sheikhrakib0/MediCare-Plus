@@ -26,7 +26,6 @@ const Price = () => {
           </section>
         </article>
       </section>
-
     </div>
   );
 };

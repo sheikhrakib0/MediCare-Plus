@@ -1,27 +1,32 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
-  const {signInUsingEmail, processLogin} = useAuth();
+  const {signInUsingEmail, processLogin, error, setError} = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [name, setName] = useState('');
+
+  const history = useHistory();
 
   processLogin(email, password, setError);
 
   const handleRegistration = (e) => {
     e.preventDefault();
-    console.log(email, password);
     if(password.length < 6){
       setError('Password should be at least 6 characters,')
       return
     }
     else{
-      signInUsingEmail(email, password, setError);
+      signInUsingEmail(email, password, name, history);
     }
     
+  }
+
+  const handleNameChange = e =>{
+    setName(e.target.value);
   }
 
   const handleEmailInput= (e)=>{
@@ -49,24 +54,13 @@ const Register = () => {
                 <div className="mb-4 md:flex md:justify-between">
                   <div className="mb-4 md:mr-2 md:mb-0">
                     <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="firstName">
-                      First Name
+                      Full Name
                     </label>
-                    <input
+                    <input onChange={handleNameChange}
                       className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                       id="firstName"
                       type="text"
-                      placeholder="First Name"
-                    />
-                  </div>
-                  <div className="md:ml-2">
-                    <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="lastName">
-                      Last Name
-                    </label>
-                    <input
-                      className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="lastName"
-                      type="text"
-                      placeholder="Last Name"
+                      placeholder="Full Name"
                     />
                   </div>
                 </div>
@@ -95,8 +89,8 @@ const Register = () => {
                     <p className="text-xs italic text-red-500">Please choose a password.</p>
                   </div>
                 </div>
+                <p>{error}</p>
                 <div className="mb-6 text-center">
-                  <div className='text-red-700'>{error}</div>
                   <button onClick={handleRegistration}
                     className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                     type="button"
