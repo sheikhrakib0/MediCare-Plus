@@ -29,12 +29,6 @@ function App() {
             <Route path='/services'>
               <Services></Services>
             </Route>
-            <Route path='/login'>
-              <Login></Login>
-            </Route>
-            <Route path='/register'>
-              <Register></Register>
-            </Route>
             <PrivateRoute path='/servicedetails/:id'>
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
@@ -43,6 +37,12 @@ function App() {
             </Route>
             <Route path='/contact'>
               <ContactUs></ContactUs>
+            </Route>
+            <Route path='/login'>
+              <Login></Login>
+            </Route>
+            <Route path='/register'>
+              <Register></Register>
             </Route>
             <Route exact path='/*'>
               <NotFound></NotFound>

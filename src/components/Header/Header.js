@@ -30,7 +30,7 @@ const Header = () => {
               <Link to='/services' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
                 Services
               </Link>
-              <Link to='/price' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+              <Link to="/price" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
                 Price
               </Link>
               <Link to='/contact' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white uppercase">
