@@ -89,7 +89,6 @@ const Register = () => {
                     <p className="text-xs italic text-red-500">Please choose a password.</p>
                   </div>
                 </div>
-                <p>{error}</p>
                 <div className="mb-6 text-center">
                   <button onClick={handleRegistration}
                     className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"

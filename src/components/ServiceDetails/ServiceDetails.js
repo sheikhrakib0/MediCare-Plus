@@ -14,7 +14,7 @@ const ServiceDetails = () => {
     <div className='container' style={{height: '500px'}}>
       <h2 className="text-4xl pt-4">This is service detials with id:  {id}</h2>
       <h2>This data is not from a real api , that's why single item's data can't be loaded</h2>
-      <h3>Name: {service?.price}</h3>
+      <h3>Name: {service?.name}</h3>
     </div>
   );
 };
