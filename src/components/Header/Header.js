@@ -12,23 +12,23 @@ const Header = () => {
   return (
     <div>
       <div>
-        <nav class="flex items-center justify-between flex-wrap bg-black text-white p-6">
-          <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <img src={logo} alt='logo' class="fill-current h-8 w-8 mr-2" width="54" height="54" />
-            <span class="font-semibold text-xl tracking-tight">Medicare Plus</span>
+        <nav className="flex items-center justify-between flex-wrap bg-black text-white p-6">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <img src={logo} alt='logo' className="fill-current h-8 w-8 mr-2" width="54" height="54" />
+            <span className="font-semibold text-xl tracking-tight">Medicare Plus</span>
           </div>
-          <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow">
+          <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div className="text-sm lg:flex-grow">
               <Link to="/home" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
                 Home
               </Link>
-              <Link to='/services' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+              <Link to='/services' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
                 Services
               </Link>
-              <Link to="/price" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
+              <Link to="/price" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 uppercase">
                 Price
               </Link>
-              <Link to='/contact' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white uppercase">
+              <Link to='/contact' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white uppercase">
                 Contact Us
               </Link>
             </div>

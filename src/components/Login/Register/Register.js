@@ -12,18 +12,6 @@ const Register = () => {
   const history = useHistory();
 
 
-  const handleRegistration = (e) => {
-    e.preventDefault();
-    if(password.length < 6){
-      setError('Password should be at least 6 characters,')
-      return ;
-    }
-    else{
-      signInUsingEmail(email, password, name, history);
-    }
-    
-  }
-
   const handleNameChange = e =>{
     setName(e.target.value);
   }
@@ -34,6 +22,18 @@ const Register = () => {
 
   const handlePasswordInput = (event) =>{
     setPassword(event.target.value);
+  }
+
+  const handleRegistration = (e) => {
+    e.preventDefault();
+    if(password.length < 6){
+      setError('Password should be at least 6 characters,')
+      return ;
+    }
+    else{
+      signInUsingEmail(email, password, name, history);
+    }
+    
   }
 
   return (
