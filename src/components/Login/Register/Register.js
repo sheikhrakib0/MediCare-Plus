@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
-  const {signInUsingEmail, processLogin, error, setError} = useAuth();
+  const {signInUsingEmail, error, setError} = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,13 +11,12 @@ const Register = () => {
 
   const history = useHistory();
 
-  processLogin(email, password, setError);
 
   const handleRegistration = (e) => {
     e.preventDefault();
     if(password.length < 6){
       setError('Password should be at least 6 characters,')
-      return
+      return ;
     }
     else{
       signInUsingEmail(email, password, name, history);
@@ -89,6 +88,7 @@ const Register = () => {
                     <p className="text-xs italic text-red-500">Please choose a password.</p>
                   </div>
                 </div>
+                <p>{error}</p>
                 <div className="mb-6 text-center">
                   <button onClick={handleRegistration}
                     className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"

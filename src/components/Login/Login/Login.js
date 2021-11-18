@@ -54,7 +54,7 @@ const Login = () => {
                   <input
                   name='email'
                   onBlur={handleInput}
-                  type="email" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autocomplete required />
+                  type="email" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autocomplete required />
                 </div>
 
                 <div className="mt-4">
@@ -62,7 +62,7 @@ const Login = () => {
                   <input
                   name='password'
                   onBlur={handleInput}
-                  type="password" id="" placeholder="Enter Password" minlenght="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                  type="password" placeholder="Enter Password" minlenght="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
                 </div>
 
